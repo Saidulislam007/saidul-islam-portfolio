@@ -22,8 +22,8 @@ export const projects: Project[] = [
     solution: "One responsive experience connects personalised itineraries with destination discovery, hotels, local food, transport guidance and role-based content workflows.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Express", "MongoDB"],
     tone: "amber",
-    image: "/project-tripplan-ai.webp",
-    liveUrl: "https://tripplan-ai-delta.vercel.app",
+    image: "/tripplan.png",
+    liveUrl: "https://trip-plan-client.vercel.app",
     githubUrl: "https://github.com/Saidulislam007/TRIP-PLAN-AI"
   },
   {
@@ -36,6 +36,7 @@ export const projects: Project[] = [
     tags: ["React", "JavaScript", "Tailwind", "REST API"],
     tone: "mint",
     image: "/project-routesync.webp",
+    liveUrl: "https://routesync-phi.vercel.app",
     githubUrl: "https://github.com/Saidulislam007/routesync"
   },
   {

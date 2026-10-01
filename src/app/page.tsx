@@ -63,7 +63,7 @@ export default function Home() {
     <section className="about section"><div><h2>Developer logic.<br/><em>Designer sensitivity.</em></h2></div><div className="about-copy"><p>I work across the product—from shaping a clear interface to connecting the APIs and data that make it useful. My background in Mathematics influences how I break complex problems into simple, structured experiences.</p><div className="principles"><span><CheckCircle2/> Responsive by default</span><span><CheckCircle2/> Clear, maintainable code</span><span><CheckCircle2/> Real user problems first</span><span><CheckCircle2/> Details that build trust</span></div></div></section>
     <section className="resume-callout" aria-labelledby="resume-title">
       <div className="resume-orbit" aria-hidden="true"><FileText/></div>
-      <div className="resume-content"><p>Professional overview · 2026</p><h2 id="resume-title">Check out my <em>résumé!</em></h2><span>Experience, technical strengths, education and the product work behind my full-stack journey.</span><div className="resume-actions"><a href="/Saidul-Islam-Full-Stack-Developer-Resume.pdf" target="_blank" rel="noreferrer">View résumé <FileText/></a><a href="https://www.linkedin.com/in/saidulislam007" target="_blank" rel="noreferrer">View LinkedIn <ArrowUpRight/></a></div></div>
+      <div className="resume-content"><p>Professional overview · 2026</p><h2 id="resume-title">Check out my <em>résumé!</em></h2><span>Experience, technical strengths, education and the product work behind my full-stack journey.</span><div className="resume-actions"><a href="https://docs.google.com/document/d/1tWi0XdpsnjxhkJ3OAYq5I7WS5tWfzhvB/edit?usp=sharing&ouid=101670932447889350898&rtpof=true&sd=true" target="_blank" rel="noreferrer">View résumé <FileText/></a><a href="https://www.linkedin.com/in/saidulislam007" target="_blank" rel="noreferrer">View LinkedIn <ArrowUpRight/></a></div></div>
     </section>
     <section className="education section" id="education">
       <div className="section-head"><div><p className="kicker">Educational qualification</p><h2>A foundation in logic.</h2></div><p>Science built my curiosity. Mathematics trained my reasoning. Software development gave both a practical direction.</p></div>
@@ -81,7 +81,22 @@ export default function Home() {
       </article>
     </section>
     <section className="toolkit section"><div className="section-head compact"><div><p className="kicker">Technologies I work with</p><h2>Built with purpose.</h2></div><Layers3 size={38}/></div><div className="skill-marquee" aria-label="Technologies I work with">{[technologies.slice(0,6),technologies.slice(6)].map((row,rowIndex)=><div className={`skill-row skill-row-${rowIndex+1}`} key={rowIndex}><div className="skill-row-track">{[...row,...row].map(([name,icon,tone],index)=><div className="skill-logo" key={`${name}-${index}`} aria-hidden={index>=row.length}><span>{String((index%row.length)+(rowIndex*6)+1).padStart(3,"0")}</span><img className={tone} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} alt={index<row.length?`${name} logo`:""} loading="lazy"/><strong>{name}</strong></div>)}</div></div>)}</div></section>
-    <section className="contact section" id="contact"><div className="contact-icon"><Send/></div><p className="kicker">Let&apos;s connect</p><h2>Get In <em>Touch!</em></h2><p className="contact-intro">Whether you have an idea for a project or just want to chat, feel free to shoot me an email!</p><a href="mailto:said38383742@gmail.com" className="contact-link">Say Hello <Mail/></a><div className="socials"><a className="social-github" href="https://github.com/Saidulislam007" target="_blank" rel="noreferrer" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt=""/></a><a className="social-linkedin" href="https://www.linkedin.com/in/saidulislam007" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt=""/></a><a className="social-email" href="mailto:said38383742@gmail.com" aria-label="Email"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt=""/></a><span className="social-facebook social-pending" title="Facebook profile link coming soon" aria-label="Facebook profile link coming soon"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg" alt=""/></span><span className="social-instagram social-pending" title="Instagram profile link coming soon" aria-label="Instagram profile link coming soon"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" alt=""/></span></div></section>
+    <section className="contact section" id="contact"><div className="contact-icon"><Send/></div><p className="kicker">Let&apos;s connect</p><h2>Get In <em>Touch!</em></h2><p className="contact-intro">Whether you have an idea for a project or just want to chat, feel free to shoot me an email!</p>
+    <a href="mailto:said38383742@gmail.com" className="contact-link">Say Hello <Mail/></a>
+    <div className="socials">
+      <a className="social-github" href="https://github.com/Saidulislam007" target="_blank" rel="noreferrer" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt=""/></a>
+      <a className="social-linkedin" href="https://www.linkedin.com/in/saidulislam007" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt=""/></a>
+      
+      <a className="social-email" href="mailto:said38383742@gmail.com" aria-label="Email"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt=""/>
+</a>
+
+
+<a className="social-facebook" href="https://www.facebook.com/saidul.islam.519928" aria-label="facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg" alt=""/>
+</a>
+
+<a className="social-instagram" href="https://www.instagram.com/ziaanislam" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" alt=""/>
+</a>
+    </div></section>
     <footer><span>© 2026 Saidul Islam</span><span>Designed with intention. Built with Next.js.</span><a href="#top">Back to top ↑</a></footer>
   </main>;
 }
