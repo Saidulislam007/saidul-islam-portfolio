@@ -36,8 +36,8 @@ export const projects: Project[] = [
   tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Web Animations API"],
   tone: "sand",
   image: "/project-nexora.png",
-  liveUrl: "YOUR_NEXORA_LIVE_URL",
-  githubUrl: "YOUR_NEXORA_GITHUB_URL"
+  liveUrl: "https://nexora-seven-blush-17.vercel.app",
+  githubUrl: "https://github.com/Saidulislam007/nexora"
 }
   ,
   {
