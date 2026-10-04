@@ -17,9 +17,9 @@ export const projects: Project[] = [
     number: "01",
     label: "Featured case study",
     title: "TripPlan AI",
-    summary: "A smart travel planning platform designed around the real decisions Bangladeshi travellers make — destination, budget, transport, food and pace.",
-    problem: "Travel information is scattered across pages, groups and outdated posts, making even a short local trip hard to plan confidently.",
-    solution: "One responsive experience connects personalised itineraries with destination discovery, hotels, local food, transport guidance and role-based content workflows.",
+    summary: "TripPlan AI(team project)-A Bangladesh-based travel planning platform that helps users explore destinations, travel packages, hotels, and food options with AI-powered assistance.",
+    problem: "Travel information was spread across different sources, making it difficult for users to find destinations, packages, hotels, and food options in one place.",
+    solution: "Built responsive travel pages, AI Chatbox, Hotel & Food sections, travel packages, and dashboard tools for users and admins.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Express", "MongoDB"],
     tone: "amber",
     image: "/tripplan.png",
@@ -27,33 +27,47 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Saidulislam007/TRIP-PLAN-AI"
   },
   {
-    number: "02",
+  number: "02",
+  label: "Interactive creative studio",
+  title: "Nexora",
+  summary: "An interactive creative studio website with cursor-driven images, animated headings, and scroll effects.",
+  problem: "Combining text and cursor animations while keeping the website smooth and responsive across different screen sizes.",
+  solution: "Created reusable sections with image trails, flying letter animations, image parallax, magnetic buttons, and an interactive FAQ.",
+  tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Web Animations API"],
+  tone: "sand",
+  image: "/project-nexora.png",
+  liveUrl: "YOUR_NEXORA_LIVE_URL",
+  githubUrl: "YOUR_NEXORA_GITHUB_URL"
+}
+  ,
+  {
+    number: "03",
     label: "Product experience",
     title: "RouteSync",
-    summary: "A route-focused travel experience that turns saved trips into clear, useful day-by-day details across devices.",
-    problem: "Trip history becomes difficult to use when routes, schedules and essential details are separated from the traveller’s dashboard.",
-    solution: "A focused dashboard brings trip history, route details and actions into one consistent flow with responsive navigation.",
-    tags: ["React", "JavaScript", "Tailwind", "REST API"],
+    summary: "A company vehicle sharing platform that manages employee trip requests, vehicle assignments, and driver operations.",
+    problem: "Managing trip requests, vehicle availability, drivers, and trip status across different company roles.",
+    solution: "Built separate Employee, Manager, and Driver dashboards with trip requests, approvals, vehicle/driver assignment, trip tracking, and role-based access.",
+    tags: ["Next.js", "JavaScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Better Auth"],
     tone: "mint",
     image: "/project-routesync.webp",
     liveUrl: "https://routesync-phi.vercel.app",
     githubUrl: "https://github.com/Saidulislam007/routesync"
   },
   {
-    number: "03",
+    number: "04",
     label: "E-commerce experience",
     title: "Furniture",
-    summary: "A polished furniture shopping experience that helps customers discover products and move confidently from browsing to purchase.",
-    problem: "Large product collections can feel difficult to explore when categories, product details and purchase actions are visually disconnected.",
-    solution: "A responsive storefront brings product discovery, clear details and conversion-focused actions into one consistent experience.",
-    tags: ["React", "JavaScript", "Tailwind", "Firebase"],
+    summary: "A furniture e-commerce platform where users can browse products, manage carts, and place orders.",
+    problem: "Creating a secure shopping experience with different access levels for users, managers, and administrators.",
+    solution: "Built product browsing, cart and order features with Better Auth and separate dashboards for users, managers, and admins.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Better Auth"],
     tone: "sand",
     image: "/project-furniture.webp",
     liveUrl: "https://furniture-client-chi.vercel.app",
     githubUrl: "https://github.com/Saidulislam007/furniture-client"
   },
   {
-    number: "04",
+    number: "05",
     label: "Healthcare platform",
     title: "MedReserve",
     summary: "A modern healthcare appointment platform designed to make finding doctors and reserving care feel simple and trustworthy.",
@@ -66,7 +80,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Saidulislam007/doctor-client"
   },
   {
-    number: "05",
+    number: "06",
     label: "Creative gallery",
     title: "TilesGallery",
     summary: "A visual gallery experience that presents curated tile collections through an elegant, responsive browsing interface.",
@@ -79,7 +93,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Saidulislam007/tiles-gallery"
   },
   {
-    number: "06",
+    number: "07",
     label: "Library experience",
     title: "BiblioDrop",
     summary: "A focused digital library interface for discovering, organising and engaging with books in one accessible space.",
@@ -91,7 +105,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Saidulislam007/bibliodrop-client"
   },
   {
-  number: "07",
+  number: "08",
   label: "Typography experience",
   title: "Fontipsums",
   summary: "An immersive typography showcase that presents creative font combinations through full-screen layouts, bold visuals and smooth scrolling.",
