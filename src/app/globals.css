@@ -304,3 +304,6 @@ section[id]{scroll-margin-top:92px}
   .certificate-card{display:block}
   .certificate-details{padding:30px 22px 32px}
 }
+
+/* Space between course certificate and professional recommendation. */
+.certification .certificate-card + .certificate-card{margin-top:28px}
