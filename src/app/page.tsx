@@ -1,9 +1,11 @@
-import { ArrowDownRight, ArrowUpRight, Award, CheckCircle2, Code2, FileText, Layers3, Mail, Send, Sparkles } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Award, Code2, FileText, Layers3, Mail, Send, Sparkles } from "lucide-react";
+import EducationSection from "@/components/EducationSection";
+import DeveloperLogic from "@/components/DeveloperLogic";
 import HeroName from "@/components/HeroName";
 import IntroExperience from "@/components/IntroExperience";
 import MotionExperience from "@/components/MotionExperience";
 import NavigationMenu from "@/components/NavigationMenu";
-import ProjectGallery from "@/components/ProjectGallery";
+import StackedProjects from "@/components/StackedProjects";
 import { projects } from "@/data/projects";
 
 const stack = ["Next.js", "React", "TypeScript", "JavaScript", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"];
@@ -44,7 +46,7 @@ export default function Home() {
       <div className="profile-main">
         <div className="profile-content">
           <div className="profile-mark" aria-hidden="true"><img src="/saidul-profile.webp" alt=""/></div>
-          <h2 id="profile-title">Logic in my thinking.<br/><em>Intention in every interface.</em></h2>
+          <h2 id="profile-title" className="profile-heading-static">Logic in my thinking.<br/><em>Intention in every interface.</em></h2>
           <p className="profile-copy">I&apos;m a full-stack developer with a Mathematics background, building responsive digital products from Khulna, Bangladesh. I care about the complete experience—how a product looks, how clearly it works and how reliably it performs.</p>
         </div>
       </div>
@@ -55,24 +57,17 @@ export default function Home() {
       </div>
     </section>
     <section className="marquee" aria-label="Technology stack"><div>{[...stack,...stack].map((item,index)=><span key={`${item}-${index}`}>{item}<i>✦</i></span>)}</div></section>
-    <section className="work section" id="work">
+    <section className="stack-work" id="work">
       <div className="project-intro"><p className="kicker">Selected work</p><h2><span>Real problems</span><span>shaped into</span><span>clear products.</span></h2><p>Each case study connects a real challenge to the product decisions and engineering behind the outcome.</p></div>
-      <ProjectGallery items={projects.slice(0,2)}/>
+      <StackedProjects items={projects}/>
       <div className="all-projects-wrap"><a className="all-projects-button" href="/projects">View All Projects <ArrowUpRight/></a></div>
     </section>
-    <section className="about section"><div><h2>Developer logic.<br/><em>Designer sensitivity.</em></h2></div><div className="about-copy"><p>I work across the product—from shaping a clear interface to connecting the APIs and data that make it useful. My background in Mathematics influences how I break complex problems into simple, structured experiences.</p><div className="principles"><span><CheckCircle2/> Responsive by default</span><span><CheckCircle2/> Clear, maintainable code</span><span><CheckCircle2/> Real user problems first</span><span><CheckCircle2/> Details that build trust</span></div></div></section>
+    <DeveloperLogic/>
     <section className="resume-callout" aria-labelledby="resume-title">
       <div className="resume-orbit" aria-hidden="true"><FileText/></div>
       <div className="resume-content"><p>Professional overview · 2026</p><h2 id="resume-title">Check out my <em>résumé!</em></h2><span>Experience, technical strengths, education and the product work behind my full-stack journey.</span><div className="resume-actions"><a href="https://docs.google.com/document/d/1tWi0XdpsnjxhkJ3OAYq5I7WS5tWfzhvB/edit?usp=sharing&ouid=101670932447889350898&rtpof=true&sd=true" target="_blank" rel="noreferrer">View résumé <FileText/></a><a href="https://www.linkedin.com/in/saidulislam007" target="_blank" rel="noreferrer">View LinkedIn <ArrowUpRight/></a></div></div>
     </section>
-    <section className="education section" id="education">
-      <div className="section-head"><div><p className="kicker">Educational qualification</p><h2>A foundation in logic.</h2></div><p>Science built my curiosity. Mathematics trained my reasoning. Software development gave both a practical direction.</p></div>
-      <div className="education-list">
-        <article><div className="edu-year">2016<span>01</span></div><div className="edu-main"><p>Secondary education</p><h3>Secondary School Certificate <em>(SSC)</em></h3><strong>H. R. H. Prince Aga Khan Secondary School, Khulna</strong><div className="edu-meta"><span>Jessore Board</span><span>Science</span><span>GPA 4.78 / 5.00</span></div><p className="edu-note">Built a strong foundation in science, quantitative reasoning, disciplined study and curiosity for technology.</p></div></article>
-        <article><div className="edu-year">2018<span>02</span></div><div className="edu-main"><p>Higher secondary education</p><h3>Higher Secondary Certificate <em>(HSC)</em></h3><strong>Govt. Bangabandhu College</strong><div className="edu-meta"><span>Jessore Board</span><span>Science</span><span>GPA 4.08 / 5.00</span></div><p className="edu-note">Advanced mathematics and science strengthened my logical reasoning, data interpretation and systematic problem-solving.</p></div></article>
-        <article className="featured-edu"><div className="edu-year">2024<span>03</span></div><div className="edu-main"><p>Undergraduate degree</p><h3>B.Sc. <em>(Honours)</em> in Mathematics</h3><strong>National University, Bangladesh</strong><div className="edu-meta"><span>Mathematics</span><span>B.Sc. (Honours)</span><span>GPA 3.08 / 4.00</span></div><p className="edu-note">Pure mathematics trained me to decompose complex real-world problems into structured logic and algorithmic models—the analytical foundation I apply to software engineering today.</p></div></article>
-      </div>
-    </section>
+    <EducationSection/>
     <section className="certification section" id="certification">
       <div className="section-head"><div><p className="kicker">Certification</p><h2>Learning, proven.</h2></div><p>Recognized learning, proven skills and a professional recommendation that reflect my readiness to contribute.</p></div>
       <article className="certificate-card">

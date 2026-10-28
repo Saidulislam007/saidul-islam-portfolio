@@ -30,7 +30,7 @@ export default function MotionExperience() {
     if (reduced) return () => window.removeEventListener("pagehide", rememberPosition);
     document.body.classList.add("motion-ready");
 
-    const reveals = document.querySelectorAll<HTMLElement>(".profile-intro>p, .profile-content>h2, .profile-content>.profile-copy, .profile-photo, .profile-mark, .profile-values>div, .resume-content>*, .resume-orbit, .section-head, .project, .about>div, .education-list article, .certificate-preview, .certificate-details>*, .skill-logo, .contact>*");
+    const reveals = document.querySelectorAll<HTMLElement>(".profile-intro>p, .profile-content>h2:not(.profile-heading-static), .profile-content>.profile-copy, .profile-photo, .profile-mark, .profile-values>div, .resume-content>*, .resume-orbit, .section-head, .project, .about>div, .education-list article, .academic-card, .certificate-preview, .certificate-details>*, .skill-logo, .contact>*");
     reveals.forEach((el, index) => {
       el.classList.add("motion-reveal");
       el.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 80}ms`);
@@ -94,6 +94,17 @@ export default function MotionExperience() {
         card.style.setProperty("--project-index", String(index));
       });
     };
+    const academicStage = document.querySelector<HTMLElement>(".academic-stage");
+    const updateAcademicMotion = () => {
+      if (!academicStage) return;
+      const rect = academicStage.getBoundingClientRect();
+      const travel = clamp((innerHeight - rect.top) / (innerHeight + rect.height));
+      const shift = (0.5 - travel) * Math.min(innerWidth, 1500) * (innerWidth < 640 ? .28 : .75);
+      const entrance = clamp((innerHeight - rect.top) / (innerHeight * .48));
+      academicStage.style.setProperty("--academic-shift", `${shift.toFixed(2)}px`);
+      academicStage.style.setProperty("--academic-reveal", String(.25 + entrance * .75));
+      academicStage.style.setProperty("--academic-blur", `${((1 - entrance) * 5).toFixed(2)}px`);
+    };
     const updateScrollStory = () => {
       const max = document.documentElement.scrollHeight - innerHeight;
       progress.current?.style.setProperty("transform", `scaleX(${max > 0 ? window.scrollY / max : 0})`);
@@ -101,6 +112,7 @@ export default function MotionExperience() {
       storySections.forEach(section => { if (section.getBoundingClientRect().top <= innerHeight * .38) active = section.id; });
       navLinks.forEach(link => link.classList.toggle("nav-active", link.getAttribute("href") === `#${active}`));
       updateProjectMotion();
+      updateAcademicMotion();
     };
     updateScrollStory();
     window.addEventListener("scroll", updateScrollStory, { passive: true });
@@ -127,6 +139,9 @@ export default function MotionExperience() {
     interactives.forEach(el => { el.addEventListener("mouseenter", enter); el.addEventListener("mouseleave", leave); });
 
     return () => {
+      academicStage?.style.removeProperty("--academic-shift");
+      academicStage?.style.removeProperty("--academic-reveal");
+      academicStage?.style.removeProperty("--academic-blur");
       document.body.classList.remove("motion-ready", "motion-hovering"); observer.disconnect(); cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", move); window.removeEventListener("scroll", updateScrollStory); window.removeEventListener("resize", updateScrollStory); projectCleanups.forEach(fn => fn());
       window.removeEventListener("pagehide", rememberPosition);
